@@ -63,6 +63,27 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .lang-switch {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    background: rgba(108,99,255,0.15);
+    color: #6c63ff !important;
+    -webkit-text-fill-color: #6c63ff !important;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid rgba(108,99,255,0.3);
+    letter-spacing: 0.5px;
+  }
+  .lang-switch:hover {
+    background: rgba(108,99,255,0.3);
+    border-color: #6c63ff;
+    transform: scale(1.05);
   }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
@@ -518,7 +539,7 @@
 <canvas id="particles-canvas"></canvas>
 
 <nav id="navbar">
-  <div class="nav-logo">L.S.</div>
+  <div class="nav-logo">L.S.<a href="index2.html" class="lang-switch" title="Switch to English">EN</a></div>
   <ul class="nav-links">
     <li><a href="#about">关于我</a></li>
     <li><a href="#skills">技能</a></li>
