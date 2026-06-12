@@ -462,6 +462,44 @@
   .honor-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
   .honor-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; }
   .honor-detail { color: var(--text-muted); font-size: 0.82rem; }
+  
+  /* 专利证书展示 */
+  .patent-certificate {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,214,0,0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    grid-column: 1 / -1;
+    transition: all 0.4s;
+  }
+  .patent-certificate:hover {
+    border-color: rgba(255,214,0,0.5);
+    box-shadow: 0 8px 40px rgba(255,214,0,0.15);
+    transform: translateY(-4px);
+  }
+  .patent-certificate img {
+    max-width: 100%;
+    max-height: 320px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .patent-certificate .patent-label {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b, #ffe66d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+  }
+  .patent-certificate .patent-number {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
 
   /* 自我评价 */
   .self-eval {
@@ -566,7 +604,7 @@
 <!-- 关于我 -->
 <section id="about">
   <h2 class="section-title">关 于 我</h2>
-  <p class="section-subtitle">用数据说话，用行动证明</p>
+  <p class="section-subtitle">技术 × 产品 × 销售，数字化ToB销售候选人</p>
   <div class="info-grid">
     <div class="info-card" data-delay="0">
       <div class="icon">📞</div>
@@ -594,9 +632,47 @@
 <!-- 技能 -->
 <section id="skills">
   <h2 class="section-title">技 能 树</h2>
-  <p class="section-subtitle">技术底子 + 产品思维 + 管理经验</p>
+  <p class="section-subtitle">产品思维 + 业务能力 + 技术底子</p>
   <div class="skills-container">
     <div class="skill-group" data-delay="0">
+      <h3>📐 产品与项目</h3>
+      <div class="skill-item">
+        <div class="skill-name"><span>需求分析</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>原型设计</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>文档撰写</span><span>88%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>项目管理</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+      </div>
+    </div>
+    <div class="skill-group" data-delay="100">
+      <h3>💡 综合能力</h3>
+      <div class="skill-item">
+        <div class="skill-name"><span>CET-6 (469)</span><span>78%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Office 熟练</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>逻辑与表达</span><span>88%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>客户沟通</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+    </div>
+    <div class="skill-group" data-delay="200">
       <h3>🛠️ 技术基础</h3>
       <div class="skill-item">
         <div class="skill-name"><span>Python</span><span>85%</span></div>
@@ -617,44 +693,6 @@
       <div class="skill-item">
         <div class="skill-name"><span>GIS 可视化</span><span>72%</span></div>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="72"></div></div>
-      </div>
-    </div>
-    <div class="skill-group" data-delay="100">
-      <h3>📐 产品与项目</h3>
-      <div class="skill-item">
-        <div class="skill-name"><span>需求分析</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>原型设计</span><span>85%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>文档撰写</span><span>88%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>项目管理</span><span>85%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-      </div>
-    </div>
-    <div class="skill-group" data-delay="200">
-      <h3>💡 综合能力</h3>
-      <div class="skill-item">
-        <div class="skill-name"><span>CET-6 (469)</span><span>78%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>Office 熟练</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>逻辑与表达</span><span>88%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>客户沟通</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
       </div>
     </div>
   </div>
@@ -711,7 +749,7 @@
 <!-- 项目经历 -->
 <section id="projects">
   <h2 class="section-title">项 目 经 历</h2>
-  <p class="section-subtitle">从北斗到孪生教室，从智慧农业到 VR</p>
+  <p class="section-subtitle">数字孪生 · 智慧农业 · 位置服务，ToB数字化产品实战</p>
   <div class="timeline">
     <div class="timeline-item">
       <div class="timeline-dot"></div>
@@ -771,10 +809,10 @@
   <h2 class="section-title">荣 誉 墙</h2>
   <p class="section-subtitle">每一步都算数</p>
   <div class="honors-grid">
-    <div class="honor-card" data-delay="0">
-      <div class="honor-icon">📜</div>
-      <div class="honor-title">发明专利（一作）</div>
-      <div class="honor-detail">基于视频的虚实场景映射方法、系统及存储介质</div>
+    <div class="patent-certificate">
+      <img src="patent_certificate.png" alt="发明专利证书">
+      <div class="patent-label">🏆 发明专利证书（第一发明人）</div>
+      <div class="patent-number">专利号：ZL 2023 1 1461403.1 · 授权公告日：2026.06.02</div>
     </div>
     <div class="honor-card" data-delay="100">
       <div class="honor-icon">📰</div>
@@ -803,11 +841,11 @@
 <section id="contact">
   <div class="self-eval">
     <p>
-      良好的客户沟通与需求分析能力，善于将技术理解转化为销售语言。<br>
-      有创业与项目管理经验，能统筹多方资源推动项目落地。<br>
-      在海尔区域业务岗中实现区域<span class="highlight-num"><span class="num counter" data-target="43">0</span>%</span>销售额增长、
-      <span class="highlight-num"><span class="num counter" data-target="36">0</span>%</span>提货效率提升。<br>
-      抗压、学习能力强。
+      <strong>复合型ToB数字化销售候选人</strong>：既有数字孪生、GIS可视化等技术背景，又能做需求分析和客户沟通。<br>
+      能把技术语言转化为客户语言，具备ToB项目从需求对接到交付的全链路经验。<br>
+      创业期间独立对接民航二所等机构客户，完成VR除冰培训设备从方案到交付的完整闭环。<br>
+      海尔空调零售期间实现区域<span class="highlight-num"><span class="num counter" data-target="43">0</span>%</span>销售额增长、<span class="highlight-num"><span class="num counter" data-target="36">0</span>%</span>提货效率提升。<br>
+      发明专利一作（数字孪生方向）+ 期刊论文，具备技术方案文档撰写能力，适合数字化解决方案型销售。
     </p>
   </div>
 </section>

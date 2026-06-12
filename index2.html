@@ -463,6 +463,44 @@
   .honor-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; }
   .honor-detail { color: var(--text-muted); font-size: 0.82rem; }
 
+  /* Patent Certificate Display */
+  .patent-certificate {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,214,0,0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    grid-column: 1 / -1;
+    transition: all 0.4s;
+  }
+  .patent-certificate:hover {
+    border-color: rgba(255,214,0,0.5);
+    box-shadow: 0 8px 40px rgba(255,214,0,0.15);
+    transform: translateY(-4px);
+  }
+  .patent-certificate img {
+    max-width: 100%;
+    max-height: 320px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .patent-certificate .patent-label {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b, #ffe66d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+  }
+  .patent-certificate .patent-number {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+
   /* Self Evaluation */
   .self-eval {
     background: var(--card-bg);
@@ -566,7 +604,7 @@
 <!-- About -->
 <section id="about">
   <h2 class="section-title">A B O U T</h2>
-  <p class="section-subtitle">Speak with data, prove with action</p>
+  <p class="section-subtitle">Tech × Product × Sales — ToB Digital Sales Candidate</p>
   <div class="info-grid">
     <div class="info-card" data-delay="0">
       <div class="icon">📞</div>
@@ -594,9 +632,47 @@
 <!-- Skills -->
 <section id="skills">
   <h2 class="section-title">S K I L L S</h2>
-  <p class="section-subtitle">Technical Foundation + Product Thinking + Management Experience</p>
+  <p class="section-subtitle">Product Thinking + Business Skills + Technical Foundation</p>
   <div class="skills-container">
     <div class="skill-group" data-delay="0">
+      <h3>📐 Product & Project</h3>
+      <div class="skill-item">
+        <div class="skill-name"><span>Requirements Analysis</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Prototyping</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Documentation</span><span>88%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Project Management</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+      </div>
+    </div>
+    <div class="skill-group" data-delay="100">
+      <h3>💡 General Skills</h3>
+      <div class="skill-item">
+        <div class="skill-name"><span>CET-6 (469)</span><span>78%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Office Proficient</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Logic & Expression</span><span>88%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Client Communication</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+    </div>
+    <div class="skill-group" data-delay="200">
       <h3>🛠️ Technical Skills</h3>
       <div class="skill-item">
         <div class="skill-name"><span>Python</span><span>85%</span></div>
@@ -617,44 +693,6 @@
       <div class="skill-item">
         <div class="skill-name"><span>GIS Visualization</span><span>72%</span></div>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="72"></div></div>
-      </div>
-    </div>
-    <div class="skill-group" data-delay="100">
-      <h3>📐 Product & Project</h3>
-      <div class="skill-item">
-        <div class="skill-name"><span>Requirements Analysis</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>Prototyping</span><span>85%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>Documentation</span><span>88%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>Project Management</span><span>85%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-      </div>
-    </div>
-    <div class="skill-group" data-delay="200">
-      <h3>💡 General Skills</h3>
-      <div class="skill-item">
-        <div class="skill-name"><span>CET-6 (469)</span><span>78%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>Office Proficient</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>Logic & Expression</span><span>88%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-name"><span>Client Communication</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
       </div>
     </div>
   </div>
@@ -711,7 +749,7 @@
 <!-- ProjectsExperience -->
 <section id="projects">
   <h2 class="section-title">P R O J E C T S</h2>
-  <p class="section-subtitle">From BeiDou to Digital Twin, from Smart Agriculture to VR</p>
+  <p class="section-subtitle">Digital Twin · Smart Agriculture · LBS — ToB Digital Product Experience</p>
   <div class="timeline">
     <div class="timeline-item">
       <div class="timeline-dot"></div>
@@ -771,10 +809,10 @@
   <h2 class="section-title">H O N O R S</h2>
   <p class="section-subtitle">Every step counts</p>
   <div class="honors-grid">
-    <div class="honor-card" data-delay="0">
-      <div class="honor-icon">📜</div>
-      <div class="honor-title">1 Invention Patent (1st Author)</div>
-      <div class="honor-detail">Video-based Virtual-Real Scene Mapping Method, System & Storage Medium</div>
+    <div class="patent-certificate">
+      <img src="patent_certificate.png" alt="Invention Patent Certificate">
+      <div class="patent-label">🏆 Invention Patent Certificate (1st Inventor)</div>
+      <div class="patent-number">Patent No.: ZL 2023 1 1461403.1 · Granted: 2026.06.02</div>
     </div>
     <div class="honor-card" data-delay="100">
       <div class="honor-icon">📰</div>
@@ -803,11 +841,11 @@
 <section id="contact">
   <div class="self-eval">
     <p>
-      Strong client communication & requirements analysis skills, adept at translating technical insights into sales language.<br>
-      Startup & project management experience, capable of coordinating multi-party resources for project delivery.<br>
-      Achieved regional <span class="highlight-num"><span class="num counter" data-target="43">0</span>%</span> sales growth and 
-      <span class="highlight-num"><span class="num counter" data-target="36">0</span>%</span> delivery efficiency improvement at Haier.<br>
-      Resilient under pressure, fast learner.
+      <strong>Hybrid ToB Digital Sales Candidate</strong>: Technical background in Digital Twin & GIS Visualization, combined with strong requirements analysis & client communication skills.<br>
+      Excel at translating technical language into business value, with full-cycle experience from client engagement to project delivery.<br>
+      During startup: independently managed institutional clients like CAAC (Civil Aviation Administration), delivering VR deicing training equipment from proposal to deployment.<br>
+      At Haier: achieved regional <span class="highlight-num"><span class="num counter" data-target="43">0</span>%</span> sales growth and <span class="highlight-num"><span class="num counter" data-target="36">0</span>%</span> delivery efficiency improvement.<br>
+      1st author invention patent (Digital Twin domain) + Journal paper — strong technical documentation skills, ideal for digital solutions sales roles.
     </p>
   </div>
 </section>
