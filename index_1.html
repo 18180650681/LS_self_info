@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="罗森（Sen Luo）在线简历——海外销售 / 国际渠道开发 / 驻外业务。Online resume of Sen Luo, targeting overseas sales and international channel development roles.">
+<title>罗森 · 海外销售简历 | Sen Luo · Overseas Sales Resume</title>
+<style>
+  :root{
+    --bg:#070A14;
+    --glass:rgba(255,255,255,.06);
+    --glass-strong:rgba(255,255,255,.09);
+    --stroke:rgba(255,255,255,.12);
+    --primary:#7C5CFF;
+    --accent:#69E7FF;
+    --success:#62FAD3;
+    --text:#F7FAFF;
+    --muted:#9AA7C7;
+    --radius:18px;
+    --font-sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-sans);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* 静态极光背景（无循环动画） */
+  .aurora{
+    position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(640px 480px at 12% -6%, rgba(124,92,255,.22), transparent 62%),
+      radial-gradient(720px 540px at 92% 8%, rgba(105,231,255,.13), transparent 64%),
+      radial-gradient(820px 620px at 50% 108%, rgba(98,250,211,.08), transparent 66%),
+      var(--bg);
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ===== 导航 ===== */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    background:rgba(7,10,20,.62);
+    border-bottom:1px solid var(--stroke);
+  }
+  .nav-inner{
+    max-width:1080px;margin:0 auto;padding:12px 24px;
+    display:flex;align-items:center;gap:20px;
+  }
+  .brand{font-weight:700;letter-spacing:.02em;font-size:15px;white-space:nowrap}
+  .brand b{color:var(--accent);font-weight:700}
+  .nav-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+  .nav-links a{
+    color:var(--muted);text-decoration:none;font-size:13.5px;
+    padding:6px 10px;border-radius:9px;transition:color .18s ease,background .18s ease;
+  }
+  .nav-links a:hover{color:var(--text);background:var(--glass)}
+  .nav-links a:focus-visible,.lang-btn:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .lang-btn{
+    flex-shrink:0;cursor:pointer;
+    font-family:inherit;font-size:13px;font-weight:600;
+    color:var(--text);
+    background:linear-gradient(135deg,rgba(124,92,255,.28),rgba(105,231,255,.18));
+    border:1px solid rgba(124,92,255,.55);
+    padding:7px 14px;border-radius:999px;
+    transition:transform .16s ease,box-shadow .16s ease;
+  }
+  .lang-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(124,92,255,.28)}
+
+  /* ===== Hero ===== */
+  .hero{padding:76px 0 56px}
+  .hero-grid{display:grid;grid-template-columns:300px 1fr;gap:52px;align-items:center}
+  .photo-frame{
+    position:relative;border-radius:24px;padding:5px;
+    background:linear-gradient(150deg,var(--primary),rgba(105,231,255,.75) 55%,rgba(98,250,211,.6));
+    box-shadow:0 18px 48px rgba(124,92,255,.22);
+  }
+  .photo-frame img{
+    display:block;width:100%;height:auto;border-radius:20px;
+    background:#0d1226;
+  }
+  .status-chip{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;color:var(--success);
+    background:rgba(98,250,211,.08);
+    border:1px solid rgba(98,250,211,.35);
+    padding:6px 14px;border-radius:999px;margin-bottom:18px;
+  }
+  .status-chip .dot{width:8px;height:8px;border-radius:50%;background:var(--success)}
+  h1{
+    margin:0 0 10px;font-size:clamp(34px,5vw,50px);line-height:1.15;
+    letter-spacing:-.01em;font-weight:800;
+  }
+  h1 .en-name{
+    display:block;font-size:.42em;font-weight:600;letter-spacing:.28em;
+    color:var(--muted);margin-top:8px;text-transform:uppercase;
+  }
+  .tagline{
+    margin:0 0 18px;font-size:clamp(16px,2.2vw,20px);font-weight:600;
+    background:linear-gradient(92deg,var(--primary),var(--accent));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-intro{margin:0 0 24px;color:var(--muted);font-size:15.5px;max-width:58ch}
+  .fact-chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px;padding:0;list-style:none}
+  .fact-chips li{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:13.5px;color:var(--text);
+    background:var(--glass);border:1px solid var(--stroke);
+    padding:7px 13px;border-radius:999px;
+  }
+  .fact-chips svg{width:14px;height:14px;flex-shrink:0}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:14.5px;font-weight:600;text-decoration:none;
+    padding:12px 24px;border-radius:13px;
+    transition:transform .16s ease,box-shadow .16s ease,background .16s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{
+    color:#0b0e1c;
+    background:linear-gradient(135deg,var(--accent),var(--primary));
+    box-shadow:0 8px 24px rgba(124,92,255,.32);
+  }
+  .btn-primary:hover{box-shadow:0 12px 30px rgba(124,92,255,.42)}
+  .btn-ghost{color:var(--text);background:var(--glass);border:1px solid var(--stroke)}
+  .btn-ghost:hover{background:var(--glass-strong)}
+
+  /* ===== 章节通用 ===== */
+  section{padding:46px 0}
+  .overline{
+    margin:0 0 6px;font-size:12.5px;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--accent);
+  }
+  h2{margin:0 0 26px;font-size:clamp(24px,3.2vw,32px);letter-spacing:-.01em;font-weight:750}
+  .glass{
+    background:var(--glass);
+    border:1px solid var(--stroke);
+    border-radius:var(--radius);
+  }
+
+  /* 对标岗位 */
+  .roles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .role-card{padding:26px 24px;transition:transform .18s ease,border-color .18s ease,background .18s ease}
+  .role-card:hover{transform:translateY(-3px);border-color:rgba(105,231,255,.4);background:var(--glass-strong)}
+  .role-card .role-icon{
+    width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+    background:linear-gradient(135deg,rgba(124,92,255,.3),rgba(105,231,255,.16));
+    border:1px solid rgba(124,92,255,.4);
+  }
+  .role-card .role-icon svg{width:20px;height:20px}
+  .role-card h3{margin:0 0 8px;font-size:17px;font-weight:700}
+  .role-card p{margin:0;font-size:14px;color:var(--muted)}
+
+  /* 职业概述 */
+  .summary-card{padding:34px 36px}
+  .summary-card p{margin:0 0 16px;font-size:15.5px;color:#C9D3EC}
+  .summary-card p:last-of-type{margin-bottom:0}
+  .stat-row{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px;
+    padding-top:26px;border-top:1px solid var(--stroke);
+  }
+  .stat{min-width:0}
+  .stat .num{
+    font-size:30px;font-weight:800;letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;
+    background:linear-gradient(92deg,var(--accent),var(--success));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .stat .lbl{font-size:13px;color:var(--muted);margin-top:2px}
+
+  /* 时间线 */
+  .timeline{position:relative;margin-left:8px;padding-left:34px}
+  .timeline::before{
+    content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;
+    background:linear-gradient(180deg,var(--primary),rgba(105,231,255,.5),rgba(98,250,211,.25));
+    border-radius:2px;
+  }
+  .tl-item{position:relative;padding-bottom:34px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{
+    content:"";position:absolute;left:-32px;top:7px;
+    width:14px;height:14px;border-radius:50%;
+    background:var(--bg);border:3px solid var(--accent);
+    box-shadow:0 0 12px rgba(105,231,255,.55);
+  }
+  .tl-item:first-child::before{border-color:var(--primary);box-shadow:0 0 12px rgba(124,92,255,.6)}
+  .tl-card{padding:24px 26px}
+  .tl-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:6px}
+  .tl-head h3{margin:0;font-size:17.5px;font-weight:700}
+  .tl-role{font-size:14px;font-weight:600;color:var(--accent)}
+  .tl-date{
+    margin-left:auto;font-size:13px;color:var(--muted);
+    font-variant-numeric:tabular-nums;white-space:nowrap;
+    background:var(--glass);border:1px solid var(--stroke);
+    padding:3px 11px;border-radius:999px;
+  }
+  .tl-tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+  .tl-tags li{
+    font-size:12.5px;color:var(--accent);
+    background:rgba(105,231,255,.08);border:1px solid rgba(105,231,255,.28);
+    padding:3px 10px;border-radius:999px;
+  }
+  .tl-points{margin:0;padding-left:0;list-style:none}
+  .tl-points li{
+    position:relative;padding-left:18px;margin-bottom:10px;
+    font-size:14.5px;color:#C9D3EC;
+  }
+  .tl-points li:last-child{margin-bottom:0}
+  .tl-points li::before{
+    content:"";position:absolute;left:0;top:.72em;
+    width:7px;height:2px;background:var(--primary);border-radius:2px;
+  }
+  .tl-points b{color:var(--text);font-weight:650}
+
+  /* 项目 */
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .proj-card{padding:26px 24px;display:flex;flex-direction:column;transition:transform .18s ease,border-color .18s ease}
+  .proj-card:hover{transform:translateY(-3px);border-color:rgba(124,92,255,.45)}
+  .proj-tag{
+    align-self:flex-start;font-size:12px;font-weight:600;color:var(--success);
+    background:rgba(98,250,211,.08);border:1px solid rgba(98,250,211,.3);
+    padding:3px 10px;border-radius:999px;margin-bottom:14px;
+  }
+  .proj-card h3{margin:0 0 8px;font-size:16.5px;font-weight:700;line-height:1.45}
+  .proj-card p{margin:0 0 16px;font-size:14px;color:var(--muted);flex:1}
+  .proj-outcome{
+    display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:14px 0 0;list-style:none;
+    border-top:1px solid var(--stroke);
+  }
+  .proj-outcome li{
+    font-size:12.5px;color:var(--text);
+    background:var(--glass);border:1px solid var(--stroke);
+    padding:3px 10px;border-radius:999px;
+  }
+
+  /* 教育 */
+  .edu-card{padding:28px 30px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
+  .edu-icon{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex-shrink:0;
+    background:linear-gradient(135deg,rgba(124,92,255,.3),rgba(105,231,255,.16));
+    border:1px solid rgba(124,92,255,.4);
+  }
+  .edu-icon svg{width:24px;height:24px}
+  .edu-main{flex:1;min-width:220px}
+  .edu-main h3{margin:0 0 4px;font-size:18px;font-weight:700}
+  .edu-main p{margin:0;font-size:14.5px;color:var(--muted)}
+  .edu-date{
+    font-size:13.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;
+    background:var(--glass);border:1px solid var(--stroke);padding:5px 13px;border-radius:999px;
+  }
+
+  /* 技能 */
+  .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .skill-card{padding:26px 24px}
+  .skill-card h3{
+    margin:0 0 16px;font-size:15px;font-weight:700;display:flex;align-items:center;gap:9px;
+  }
+  .skill-card h3 .bar{width:4px;height:16px;border-radius:2px;background:linear-gradient(180deg,var(--primary),var(--accent))}
+  .skill-list{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:9px}
+  .skill-list li{
+    font-size:13px;color:#C9D3EC;
+    background:rgba(255,255,255,.05);border:1px solid var(--stroke);
+    padding:6px 12px;border-radius:9px;
+  }
+  .skill-note{margin:14px 0 0;font-size:13px;color:var(--muted)}
+
+  /* 荣誉 */
+  .award-list{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+  .award-item{
+    display:flex;gap:16px;align-items:flex-start;padding:20px 24px;
+  }
+  .award-icon{
+    width:38px;height:38px;flex-shrink:0;border-radius:11px;display:grid;place-items:center;
+    background:rgba(98,250,211,.09);border:1px solid rgba(98,250,211,.32);
+  }
+  .award-icon svg{width:18px;height:18px}
+  .award-item h3{margin:0 0 4px;font-size:15.5px;font-weight:650}
+  .award-item p{margin:0;font-size:14px;color:var(--muted)}
+
+  /* 联系 */
+  .contact-card{padding:40px 36px;text-align:center}
+  .contact-card h2{margin-bottom:10px}
+  .contact-sub{margin:0 auto 28px;max-width:56ch;color:var(--muted);font-size:15px}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left}
+  .contact-item{
+    display:flex;align-items:center;gap:14px;padding:18px 20px;
+    border-radius:14px;background:rgba(255,255,255,.05);border:1px solid var(--stroke);
+    text-decoration:none;color:var(--text);
+    transition:border-color .16s ease,background .16s ease,transform .16s ease;
+  }
+  .contact-item:hover{border-color:rgba(105,231,255,.45);background:var(--glass-strong);transform:translateY(-2px)}
+  .contact-item .ci-icon{
+    width:40px;height:40px;flex-shrink:0;border-radius:11px;display:grid;place-items:center;
+    background:linear-gradient(135deg,rgba(124,92,255,.3),rgba(105,231,255,.16));
+    border:1px solid rgba(124,92,255,.4);
+  }
+  .contact-item .ci-icon svg{width:18px;height:18px}
+  a[data-link]{cursor:pointer}
+  .contact-item .ci-lbl{display:block;font-size:12.5px;color:var(--muted)}
+  .contact-item .ci-val{display:block;font-size:14.5px;font-weight:600;overflow-wrap:anywhere}
+
+  footer{
+    padding:34px 0 44px;text-align:center;
+    color:var(--muted);font-size:13px;
+    border-top:1px solid var(--stroke);margin-top:30px;
+  }
+  footer p{margin:4px 0}
+
+  /* 入场动效：仅 JS 启用时附加，默认内容可见 */
+  .js .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s cubic-bezier(.22,.61,.36,1),transform .55s cubic-bezier(.22,.61,.36,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .js .reveal{opacity:1;transform:none;transition:none}
+    .btn,.role-card,.proj-card,.contact-item,.lang-btn{transition:none}
+  }
+
+  /* ===== 响应式 ===== */
+  @media (max-width:900px){
+    .roles-grid,.proj-grid,.skill-grid,.contact-grid{grid-template-columns:1fr 1fr}
+    .stat-row{grid-template-columns:1fr 1fr;row-gap:20px}
+    .hero-grid{grid-template-columns:240px 1fr;gap:34px}
+  }
+  @media (max-width:680px){
+    .nav-links{display:none}
+    .hero{padding:52px 0 40px}
+    .hero-grid{grid-template-columns:1fr;gap:30px;text-align:center}
+    .photo-frame{max-width:230px;margin:0 auto}
+    .fact-chips,.cta-row{justify-content:center}
+    .roles-grid,.proj-grid,.skill-grid,.contact-grid{grid-template-columns:1fr}
+    .tl-date{margin-left:0}
+    .summary-card{padding:26px 22px}
+    .contact-card{padding:30px 22px}
+  }
+
+  /* ===== 打印 ===== */
+  @media print{
+    body{background:#fff;color:#111}
+    .aurora,.nav,.cta-row,.lang-btn{display:none}
+    .glass,.tl-card,.role-card,.proj-card,.skill-card,.summary-card,.edu-card,.contact-card,.award-item{
+      background:#fff;border:1px solid #ccc;break-inside:avoid;
+    }
+    h1,h2,h3,.tagline,.tl-role,.overline,.stat .num{color:#111;-webkit-text-fill-color:#111}
+    p,li,.hero-intro,.role-card p,.proj-card p,.award-item p,.edu-main p,.contact-sub{color:#222}
+    .status-chip,.fact-chips li,.tl-tags li,.proj-outcome li,.tl-date,.edu-date,.skill-list li{
+      color:#222;background:#f2f2f2;border-color:#ccc;
+    }
+    .status-chip .dot{background:#111}
+    .timeline::before{background:#999}
+    .tl-item::before{background:#fff;border-color:#333;box-shadow:none}
+    a{color:#111;text-decoration:none}
+    section{padding:18px 0}
+    .hero{padding:10px 0 18px}
+    .photo-frame{box-shadow:none;background:none;padding:0}
+  }
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+
+<!-- ======= 导航 ======= -->
+<nav class="nav" aria-label="页内导航">
+  <div class="nav-inner">
+    <span class="brand" data-i18n="nav.brand">罗森 <b>·</b> 在线简历</span>
+    <div class="nav-links">
+      <a href="#roles" data-i18n="nav.roles">对标岗位</a>
+      <a href="#summary" data-i18n="nav.summary">职业概述</a>
+      <a href="#experience" data-i18n="nav.experience">工作经历</a>
+      <a href="#projects" data-i18n="nav.projects">代表项目</a>
+      <a href="#education" data-i18n="nav.education">教育经历</a>
+      <a href="#skills" data-i18n="nav.skills">技能</a>
+      <a href="#awards" data-i18n="nav.awards">荣誉</a>
+      <a href="#contact" data-i18n="nav.contact">联系</a>
+    </div>
+    <button class="lang-btn" id="langToggle" type="button" aria-label="Switch language / 切换语言">EN</button>
+  </div>
+</nav>
+
+<!-- ======= Hero ======= -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="photo-frame">
+      <img src="https://18180650681.github.io/LS-Resume/avatar.jpg" onerror="this.onerror=null;this.src='avatar_1.jpg';" alt="罗森证件照" width="413" height="579" data-i18n-attr="alt:hero.photoAlt">
+    </div>
+    <div>
+      <span class="status-chip"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.status">求职中 · 接受驻外与国际差旅</span></span>
+      <h1><span data-i18n="hero.name">罗森</span><span class="en-name">Sen Luo</span></h1>
+      <p class="tagline" data-i18n="hero.tagline">海外销售｜国际渠道开发｜驻外业务</p>
+      <p class="hero-intro" data-i18n="hero.intro">家电零售渠道与商用重卡海外业务双线经验，熟悉从客户需求收集、产品配置匹配、内部询价协调到报价方案支持的完整业务流程。英语六级，具备技术理解能力，适应跨文化沟通与驻外工作节奏。</p>
+      <ul class="fact-chips">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+86 181 8065 0681</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <span>2842592540@qq.com</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-i18n="hero.loc">中国 · 可驻外</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="2" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+          <span data-i18n="hero.edu">本科 · 地理信息科学</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span data-i18n="hero.lang">英语六级 CET-6</span>
+        </li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#experience" data-i18n="hero.cta1">查看工作经历</a>
+        <a class="btn btn-ghost" data-link="mailto:2842592540@qq.com" data-i18n="hero.cta2">邮件联系我</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ======= 对标岗位 ======= -->
+  <section id="roles" aria-labelledby="roles-h">
+    <p class="overline" data-i18n="roles.overline">TARGET ROLES</p>
+    <h2 id="roles-h" data-i18n="roles.h">对标岗位</h2>
+    <div class="roles-grid">
+      <article class="role-card glass reveal">
+        <div class="role-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 data-i18n="roles.r1t">海外销售 / 国际渠道开发</h3>
+        <p data-i18n="roles.r1d">依托非洲大区经销商开发与客户跟进经验，围绕区域销售目标开展潜在客户挖掘、需求分析与商机转化，熟悉 CIF / FOB 等出口贸易条款。</p>
+      </article>
+      <article class="role-card glass reveal">
+        <div class="role-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 data-i18n="roles.r2t">驻外业务代表</h3>
+        <p data-i18n="roles.r2d">适应驻外工作节奏与跨文化沟通，可长期派驻非洲等海外市场，开展客户维护、渠道管理与终端推广，跟进重点国家准入要求。</p>
+      </article>
+      <article class="role-card glass reveal">
+        <div class="role-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+        </div>
+        <h3 data-i18n="roles.r3t">技术型产品售前支持</h3>
+        <p data-i18n="roles.r3d">具备 GIS、Unity3D、数字孪生技术背景与政企项目经验，可承担技术型产品的需求转化、解决方案编制、产品演示与报价支持。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======= 职业概述 ======= -->
+  <section id="summary" aria-labelledby="summary-h">
+    <p class="overline" data-i18n="summary.overline">PROFESSIONAL SUMMARY</p>
+    <h2 id="summary-h" data-i18n="summary.h">职业概述</h2>
+    <div class="summary-card glass reveal">
+      <p data-i18n="summary.p1">具备区域渠道运营、客户沟通及技术型产品解决方案经验，拥有家电零售渠道与商用重卡海外业务经历。熟悉从客户需求收集、产品配置匹配、内部询价协调到报价方案支持的业务流程；能够围绕区域销售目标开展客户维护、渠道拓展、终端推广与跨部门协同。</p>
+      <p data-i18n="summary.p2">具备英语六级基础及技术理解能力，适应跨文化沟通、海外市场开拓与驻外工作节奏。</p>
+      <div class="stat-row">
+        <div class="stat"><div class="num">3</div><div class="lbl" data-i18n="summary.s1">段销售 / 项目经历</div></div>
+        <div class="stat"><div class="num">2</div><div class="lbl" data-i18n="summary.s2">个海外重点跟进市场</div></div>
+        <div class="stat"><div class="num">1</div><div class="lbl" data-i18n="summary.s3">项第一作者发明专利</div></div>
+        <div class="stat"><div class="num">CET-6</div><div class="lbl" data-i18n="summary.s4">大学英语六级</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 工作经历 ======= -->
+  <section id="experience" aria-labelledby="exp-h">
+    <p class="overline" data-i18n="exp.overline">EXPERIENCE</p>
+    <h2 id="exp-h" data-i18n="exp.h">工作经历</h2>
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <article class="tl-card glass">
+          <div class="tl-head">
+            <h3 data-i18n="exp.j1co">上汽红岩</h3>
+            <span class="tl-role" data-i18n="exp.j1role">海外渠道销售 · 非洲大区</span>
+            <span class="tl-date" data-i18n="exp.j1date">2026.09 – 至今</span>
+          </div>
+          <ul class="tl-points">
+            <li data-i18n="exp.j1p1"><b>客户与渠道开发：</b>围绕非洲市场开展潜在客户及经销商信息收集、业务沟通与关系维护，跟进客户采购需求，推动销售机会转化。</li>
+            <li data-i18n="exp.j1p2"><b>产品与需求匹配：</b>结合客户使用场景，整理重型自卸车、牵引车等产品需求，分析马力、驱动形式、排放、左右舵、变速箱、载重及上装系统等关键配置。</li>
+            <li data-i18n="exp.j1p3"><b>报价与项目跟进：</b>参与乌干达、赞比亚等市场客户需求跟进，协助完成车型匹配、配置核对、内部询价及 CIF / FOB 报价信息整理，协调产品、技术及商务环节。</li>
+            <li data-i18n="exp.j1p4"><b>市场与产品学习：</b>持续跟踪非洲重点国家重卡准入要求、运输及矿业应用场景、竞品与渠道情况，熟悉杰狮、金刚等产品系列，支持区域市场拓展。</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="tl-item reveal">
+        <article class="tl-card glass">
+          <div class="tl-head">
+            <h3 data-i18n="exp.j2co">海尔集团</h3>
+            <span class="tl-role" data-i18n="exp.j2role">渠道业务专员 · 川藏大区成都区域</span>
+            <span class="tl-date" data-i18n="exp.j2date">2025.12 – 2026.06</span>
+          </div>
+          <ul class="tl-points">
+            <li data-i18n="exp.j2p1"><b>区域渠道运营：</b>负责双流、温江、郫都、都江堰等区域业务协同，围绕厂家—服务商—零售商—乡镇终端渠道链条，开展客户维护、出货协调与销售跟进。</li>
+            <li data-i18n="exp.j2p2"><b>销售目标与过程管理：</b>跟进区域月度销售目标及服务商提货、配送计划，协调资源与业务节奏，推动渠道库存、终端销售和重点产品推广。</li>
+            <li data-i18n="exp.j2p3"><b>终端建设与市场推广：</b>推进门店形象、产品展示及空调专卖店建设，参与区域家博会、以旧换新及国家补贴等促销活动，协助提升终端动销。</li>
+            <li data-i18n="exp.j2p4"><b>客户赋能：</b>面向服务商及零售终端开展产品卖点、系列配置与促销政策培训，协助制定物料计划并解决日常业务问题。</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="tl-item reveal">
+        <article class="tl-card glass">
+          <div class="tl-head">
+            <h3 data-i18n="exp.j3co">四川观文科技有限公司</h3>
+            <span class="tl-role" data-i18n="exp.j3role">项目负责人 / 销售及售前服务</span>
+            <span class="tl-date" data-i18n="exp.j3date">2023.05 – 2025.11</span>
+          </div>
+          <ul class="tl-points">
+            <li data-i18n="exp.j3p1">负责政企客户沟通、需求调研、解决方案编制及项目推进，协调软硬件团队完成方案落地、交付验收与客户关系维护。</li>
+            <li data-i18n="exp.j3p2">参与民航二所 VR 除冰培训设备项目，推动从需求分析、方案设计、软硬件协调到交付验收的完整流程，项目交付并投入使用。</li>
+            <li data-i18n="exp.j3p3">参与政府及企业数字化项目售前支持，具备技术产品讲解、客户需求转化、项目协调及商务沟通经验。</li>
+          </ul>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======= 代表项目 ======= -->
+  <section id="projects" aria-labelledby="proj-h">
+    <p class="overline" data-i18n="proj.overline">SELECTED PROJECTS</p>
+    <h2 id="proj-h" data-i18n="proj.h">代表项目</h2>
+    <div class="proj-grid">
+      <article class="proj-card glass reveal">
+        <span class="proj-tag" data-i18n="proj.p1tag">海外市场</span>
+        <h3 data-i18n="proj.p1t">非洲重卡客户需求跟进｜乌干达、赞比亚</h3>
+        <p data-i18n="proj.p1d">参与客户车辆采购需求梳理，完成重卡核心配置拆解、车型初步匹配及报价资料协调，涉及 CIF 蒙巴萨、FOB 等贸易条款。</p>
+        <ul class="proj-outcome">
+          <li data-i18n="proj.p1o1">配置匹配</li>
+          <li data-i18n="proj.p1o2">报价协调</li>
+        </ul>
+      </article>
+      <article class="proj-card glass reveal">
+        <span class="proj-tag" data-i18n="proj.p2tag">政企交付</span>
+        <h3 data-i18n="proj.p2t">VR 除冰培训设备｜民航二所</h3>
+        <p data-i18n="proj.p2d">参与设备整体方案与软硬件协同，协调客户需求、项目实施及交付验收，项目成功交付并投入使用。</p>
+        <ul class="proj-outcome">
+          <li data-i18n="proj.p2o1">成功交付</li>
+          <li data-i18n="proj.p2o2">投入使用</li>
+        </ul>
+      </article>
+      <article class="proj-card glass reveal">
+        <span class="proj-tag" data-i18n="proj.p3tag">项目负责人</span>
+        <h3 data-i18n="proj.p3t">智慧化孪生教室系统</h3>
+        <p data-i18n="proj.p3d">负责 Unity3D 场景与功能设计，参与技术方案及知识产权材料整理，形成软件著作权、第一作者发明专利及校级期刊论文成果。</p>
+        <ul class="proj-outcome">
+          <li data-i18n="proj.p3o1">软件著作权</li>
+          <li data-i18n="proj.p3o2">第一作者发明专利</li>
+          <li data-i18n="proj.p3o3">期刊论文</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======= 教育经历 ======= -->
+  <section id="education" aria-labelledby="edu-h">
+    <p class="overline" data-i18n="edu.overline">EDUCATION</p>
+    <h2 id="edu-h" data-i18n="edu.h">教育经历</h2>
+    <div class="edu-card glass reveal">
+      <div class="edu-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="1.8" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 10v6"/></svg>
+      </div>
+      <div class="edu-main">
+        <h3 data-i18n="edu.school">成都信息工程大学</h3>
+        <p data-i18n="edu.major">地理信息科学 · 全日制本科</p>
+      </div>
+      <span class="edu-date" data-i18n="edu.date">2021.09 – 2025.06</span>
+    </div>
+  </section>
+
+  <!-- ======= 语言与技能 ======= -->
+  <section id="skills" aria-labelledby="skills-h">
+    <p class="overline" data-i18n="skills.overline">LANGUAGES &amp; SKILLS</p>
+    <h2 id="skills-h" data-i18n="skills.h">语言与技能</h2>
+    <div class="skill-grid">
+      <div class="skill-card glass reveal">
+        <h3><span class="bar" aria-hidden="true"></span><span data-i18n="skills.g1t">语言能力</span></h3>
+        <ul class="skill-list">
+          <li data-i18n="skills.g1i1">中文（母语）</li>
+          <li data-i18n="skills.g1i2">英语 CET-6</li>
+        </ul>
+        <p class="skill-note" data-i18n="skills.g1n">可阅读英文产品资料、进行基础商务沟通，持续强化海外销售场景口语。</p>
+      </div>
+      <div class="skill-card glass reveal">
+        <h3><span class="bar" aria-hidden="true"></span><span data-i18n="skills.g2t">销售与业务</span></h3>
+        <ul class="skill-list">
+          <li data-i18n="skills.g2i1">客户需求分析</li>
+          <li data-i18n="skills.g2i2">渠道维护与开发</li>
+          <li data-i18n="skills.g2i3">产品配置匹配</li>
+          <li data-i18n="skills.g2i4">方案及报价支持</li>
+          <li data-i18n="skills.g2i5">项目跟进</li>
+          <li data-i18n="skills.g2i6">跨部门协调</li>
+        </ul>
+      </div>
+      <div class="skill-card glass reveal">
+        <h3><span class="bar" aria-hidden="true"></span><span data-i18n="skills.g3t">技术基础</span></h3>
+        <ul class="skill-list">
+          <li data-i18n="skills.g3i1">Office 办公软件</li>
+          <li data-i18n="skills.g3i2">GIS</li>
+          <li data-i18n="skills.g3i3">Unity3D</li>
+          <li data-i18n="skills.g3i4">UE</li>
+          <li data-i18n="skills.g3i5">数字化可视化</li>
+        </ul>
+        <p class="skill-note" data-i18n="skills.g3n">熟悉数字化 / 软硬件产品基本逻辑，可支持技术型产品沟通。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 荣誉与成果 ======= -->
+  <section id="awards" aria-labelledby="awards-h">
+    <p class="overline" data-i18n="awards.overline">AWARDS &amp; PUBLICATIONS</p>
+    <h2 id="awards-h" data-i18n="awards.h">荣誉与成果</h2>
+    <ul class="award-list">
+      <li class="award-item glass reveal">
+        <div class="award-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#62FAD3" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>
+        </div>
+        <div>
+          <h3 data-i18n="awards.a1t">第一作者发明专利</h3>
+          <p data-i18n="awards.a1d">《基于视频的虚实场景映射方法、系统及存储介质》</p>
+        </div>
+      </li>
+      <li class="award-item glass reveal">
+        <div class="award-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#62FAD3" stroke-width="1.8" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+        </div>
+        <div>
+          <h3 data-i18n="awards.a2t">期刊论文</h3>
+          <p data-i18n="awards.a2d">成都信息工程大学学报：《智慧化孪生教室系统的设计与开发》</p>
+        </div>
+      </li>
+      <li class="award-item glass reveal">
+        <div class="award-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#62FAD3" stroke-width="1.8" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a1 1 0 0 0-1 1c0 2.2 1.8 4 4 4M17 6h3a1 1 0 0 1 1 1c0 2.2-1.8 4-4 4"/></svg>
+        </div>
+        <div>
+          <h3 data-i18n="awards.a3t">「北斗杯」省二等奖</h3>
+          <p data-i18n="awards.a3d">《基于北斗的智汇长江管理系统》</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ======= 联系方式 ======= -->
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="contact-card glass reveal">
+      <p class="overline" data-i18n="contact.overline">CONTACT</p>
+      <h2 id="contact-h" data-i18n="contact.h">联系方式</h2>
+      <p class="contact-sub" data-i18n="contact.sub">欢迎就海外销售、国际渠道开发及驻外业务岗位机会与我联系，可随时安排面试沟通。</p>
+      <div class="contact-grid">
+        <a class="contact-item" data-link="tel:+8618180650681">
+          <span class="ci-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span><span class="ci-lbl" data-i18n="contact.phoneLbl">电话</span><span class="ci-val">+86 181 8065 0681</span></span>
+        </a>
+        <a class="contact-item" data-link="mailto:2842592540@qq.com">
+          <span class="ci-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </span>
+          <span><span class="ci-lbl" data-i18n="contact.mailLbl">邮箱</span><span class="ci-val">2842592540@qq.com</span></span>
+        </a>
+        <div class="contact-item">
+          <span class="ci-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#69E7FF" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <span><span class="ci-lbl" data-i18n="contact.locLbl">工作地点</span><span class="ci-val" data-i18n="contact.locVal">中国 · 接受驻外与国际差旅</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p data-i18n="footer.l1">© 2026 罗森（Sen Luo）· 海外销售 / 国际渠道开发 / 驻外业务</p>
+  <p data-i18n="footer.l2">本页面内容基于本人真实简历生成</p>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  try{
+    document.documentElement.classList.add("js");
+
+    /* ========== 双语字典 ========== */
+    var I18N = {
+      "nav.brand":{zh:"罗森 <b>·</b> 在线简历",en:"Sen Luo <b>·</b> Resume"},
+      "nav.roles":{zh:"对标岗位",en:"Target Roles"},
+      "nav.summary":{zh:"职业概述",en:"Summary"},
+      "nav.experience":{zh:"工作经历",en:"Experience"},
+      "nav.projects":{zh:"代表项目",en:"Projects"},
+      "nav.education":{zh:"教育经历",en:"Education"},
+      "nav.skills":{zh:"技能",en:"Skills"},
+      "nav.awards":{zh:"荣誉",en:"Awards"},
+      "nav.contact":{zh:"联系",en:"Contact"},
+
+      "hero.photoAlt":{zh:"罗森证件照",en:"ID photo of Sen Luo"},
+      "hero.status":{zh:"求职中 · 接受驻外与国际差旅",en:"Open to Work · Overseas Assignments & Travel"},
+      "hero.name":{zh:"罗森",en:"Sen Luo"},
+      "hero.tagline":{zh:"海外销售｜国际渠道开发｜驻外业务",en:"Overseas Sales | Channel Development | International Business"},
+      "hero.intro":{zh:"家电零售渠道与商用重卡海外业务双线经验，熟悉从客户需求收集、产品配置匹配、内部询价协调到报价方案支持的完整业务流程。英语六级，具备技术理解能力，适应跨文化沟通与驻外工作节奏。",en:"Sales professional experienced in both consumer appliance distribution and overseas heavy-duty truck sales. Skilled across the full sales cycle — from customer requirement discovery and product configuration matching to pricing coordination and quotation support. CET-6 certified with a technical background, ready for cross-cultural communication and overseas assignments."},
+      "hero.loc":{zh:"中国 · 可驻外",en:"China · Open to Relocation"},
+      "hero.edu":{zh:"本科 · 地理信息科学",en:"B.S. in Geoinformatics"},
+      "hero.lang":{zh:"英语六级 CET-6",en:"English · CET-6"},
+      "hero.cta1":{zh:"查看工作经历",en:"View Experience"},
+      "hero.cta2":{zh:"邮件联系我",en:"Email Me"},
+
+      "roles.overline":{zh:"TARGET ROLES",en:"TARGET ROLES"},
+      "roles.h":{zh:"对标岗位",en:"Target Roles"},
+      "roles.r1t":{zh:"海外销售 / 国际渠道开发",en:"Overseas Sales / Channel Development"},
+      "roles.r1d":{zh:"依托非洲大区经销商开发与客户跟进经验，围绕区域销售目标开展潜在客户挖掘、需求分析与商机转化，熟悉 CIF / FOB 等出口贸易条款。",en:"Hands-on experience in dealer development and customer follow-up across African markets — prospecting, needs analysis, and opportunity conversion toward regional sales targets, with working knowledge of CIF / FOB export terms."},
+      "roles.r2t":{zh:"驻外业务代表",en:"Overseas-Based Business Representative"},
+      "roles.r2d":{zh:"适应驻外工作节奏与跨文化沟通，可长期派驻非洲等海外市场，开展客户维护、渠道管理与终端推广，跟进重点国家准入要求。",en:"Adaptable to overseas posting rhythms and cross-cultural communication; available for long-term assignment in Africa and other markets, covering customer maintenance, channel management, retail promotion, and tracking local market-access requirements."},
+      "roles.r3t":{zh:"技术型产品售前支持",en:"Pre-sales Support for Technical Products"},
+      "roles.r3d":{zh:"具备 GIS、Unity3D、数字孪生技术背景与政企项目经验，可承担技术型产品的需求转化、解决方案编制、产品演示与报价支持。",en:"A technical foundation in GIS, Unity3D, and digital twin, plus enterprise and public-sector project experience — able to translate requirements, build solution proposals, deliver product demos, and support quotations for technical products."},
+
+      "summary.overline":{zh:"PROFESSIONAL SUMMARY",en:"PROFESSIONAL SUMMARY"},
+      "summary.h":{zh:"职业概述",en:"Professional Summary"},
+      "summary.p1":{zh:"具备区域渠道运营、客户沟通及技术型产品解决方案经验，拥有家电零售渠道与商用重卡海外业务经历。熟悉从客户需求收集、产品配置匹配、内部询价协调到报价方案支持的业务流程；能够围绕区域销售目标开展客户维护、渠道拓展、终端推广与跨部门协同。",en:"Sales professional with experience in regional channel operations, customer relationship management, and technical solution support, spanning consumer appliance distribution and overseas heavy-duty truck sales. Skilled in understanding customer requirements, matching product configurations, coordinating quotations and internal resources, and supporting sales opportunities from initial communication through follow-up."},
+      "summary.p2":{zh:"具备英语六级基础及技术理解能力，适应跨文化沟通、海外市场开拓与驻外工作节奏。",en:"Holds a Bachelor's degree in Geoinformatics and CET-6 certification, with a technical background that supports communication of complex products and solutions. Open to overseas assignments and international travel."},
+      "summary.s1":{zh:"段销售 / 项目经历",en:"Sales & Project Roles"},
+      "summary.s2":{zh:"个海外重点跟进市场",en:"Key Overseas Markets"},
+      "summary.s3":{zh:"项第一作者发明专利",en:"First-author Patent"},
+      "summary.s4":{zh:"大学英语六级",en:"College English Test Band 6"},
+
+      "exp.overline":{zh:"EXPERIENCE",en:"EXPERIENCE"},
+      "exp.h":{zh:"工作经历",en:"Professional Experience"},
+      "exp.j1co":{zh:"上汽红岩",en:"SAIC Hongyan"},
+      "exp.j1role":{zh:"海外渠道销售 · 非洲大区",en:"Overseas Channel Sales · Africa Region"},
+      "exp.j1date":{zh:"2026.09 – 至今",en:"2026.09 – Present"},
+      "exp.j1p1":{zh:"<b>客户与渠道开发：</b>围绕非洲市场开展潜在客户及经销商信息收集、业务沟通与关系维护，跟进客户采购需求，推动销售机会转化。",en:"<b>Dealer &amp; Customer Development:</b> Identify and communicate with prospective customers and dealers in African markets; maintain relationships, follow up on purchasing needs, and support the conversion of sales opportunities."},
+      "exp.j1p2":{zh:"<b>产品与需求匹配：</b>结合客户使用场景，整理重型自卸车、牵引车等产品需求，分析马力、驱动形式、排放、左右舵、变速箱、载重及上装系统等关键配置。",en:"<b>Product &amp; Specification Matching:</b> Translate customer applications into truck requirements, covering horsepower, axle configuration, emission standards, left- or right-hand drive, transmission, payload, and body or hydraulic systems."},
+      "exp.j1p3":{zh:"<b>报价与项目跟进：</b>参与乌干达、赞比亚等市场客户需求跟进，协助完成车型匹配、配置核对、内部询价及 CIF / FOB 报价信息整理，协调产品、技术及商务环节。",en:"<b>Quotation &amp; Sales Coordination:</b> Support customer enquiries in markets including Uganda and Zambia; coordinate model selection, specification confirmation, internal pricing, and CIF / FOB quotation information across product, technical, and commercial teams."},
+      "exp.j1p4":{zh:"<b>市场与产品学习：</b>持续跟踪非洲重点国家重卡准入要求、运输及矿业应用场景、竞品与渠道情况，熟悉杰狮、金刚等产品系列，支持区域市场拓展。",en:"<b>Market Intelligence:</b> Track truck market-access regulations, transport and mining applications, competitors, and channel conditions in key African countries; build product knowledge of ranges such as GENLYON and KING KONG to support regional business development."},
+      "exp.j2co":{zh:"海尔集团",en:"Haier Group"},
+      "exp.j2role":{zh:"渠道业务专员 · 川藏大区成都区域",en:"Retail Sales Specialist · Chengdu Area, Sichuan-Tibet Region"},
+      "exp.j2date":{zh:"2025.12 – 2026.06",en:"2025.12 – 2026.06"},
+      "exp.j2p1":{zh:"<b>区域渠道运营：</b>负责双流、温江、郫都、都江堰等区域业务协同，围绕厂家—服务商—零售商—乡镇终端渠道链条，开展客户维护、出货协调与销售跟进。",en:"<b>Regional Channel Operations:</b> Coordinated business across Shuangliu, Wenjiang, Pidu, and Dujiangyan, working along the manufacturer–service provider–retailer–township channel chain on customer maintenance, shipment coordination, and sales follow-up."},
+      "exp.j2p2":{zh:"<b>销售目标与过程管理：</b>跟进区域月度销售目标及服务商提货、配送计划，协调资源与业务节奏，推动渠道库存、终端销售和重点产品推广。",en:"<b>Sales Target &amp; Process Management:</b> Tracked monthly regional sales targets together with service-provider order and delivery plans; coordinated resources and business rhythm to drive channel inventory, retail sell-through, and key product promotion."},
+      "exp.j2p3":{zh:"<b>终端建设与市场推广：</b>推进门店形象、产品展示及空调专卖店建设，参与区域家博会、以旧换新及国家补贴等促销活动，协助提升终端动销。",en:"<b>Retail Execution &amp; Promotion:</b> Advanced store image, product display, and branded air-conditioning store development; participated in regional trade fairs, trade-in campaigns, and government-subsidy promotions to boost retail sell-through."},
+      "exp.j2p4":{zh:"<b>客户赋能：</b>面向服务商及零售终端开展产品卖点、系列配置与促销政策培训，协助制定物料计划并解决日常业务问题。",en:"<b>Retailer Enablement:</b> Delivered training on product selling points, lineup configurations, and promotion policies to service providers and retail teams; helped plan promotional materials and resolve day-to-day channel issues."},
+      "exp.j3co":{zh:"四川观文科技有限公司",en:"Sichuan Guanwen Technology Co., Ltd."},
+      "exp.j3role":{zh:"项目负责人 / 销售及售前服务",en:"Project Lead / Sales & Pre-sales Support"},
+      "exp.j3date":{zh:"2023.05 – 2025.11",en:"2023.05 – 2025.11"},
+      "exp.j3p1":{zh:"负责政企客户沟通、需求调研、解决方案编制及项目推进，协调软硬件团队完成方案落地、交付验收与客户关系维护。",en:"Managed communication with enterprise and public-sector clients, requirement research, solution proposal preparation, and project execution; coordinated hardware and software teams through delivery, acceptance, and ongoing relationship maintenance."},
+      "exp.j3p2":{zh:"参与民航二所 VR 除冰培训设备项目，推动从需求分析、方案设计、软硬件协调到交付验收的完整流程，项目交付并投入使用。",en:"Worked on a VR aircraft de-icing training system for the Second Research Institute of CAAC, driving the full cycle from requirement analysis and solution design to hardware/software coordination, delivery, and acceptance — the system was delivered and put into use."},
+      "exp.j3p3":{zh:"参与政府及企业数字化项目售前支持，具备技术产品讲解、客户需求转化、项目协调及商务沟通经验。",en:"Provided pre-sales support for government and enterprise digitalization projects, with experience in technical product presentation, translating customer needs into solutions, project coordination, and business communication."},
+
+      "proj.overline":{zh:"SELECTED PROJECTS",en:"SELECTED PROJECTS"},
+      "proj.h":{zh:"代表项目",en:"Selected Projects"},
+      "proj.p1tag":{zh:"海外市场",en:"Overseas Market"},
+      "proj.p1t":{zh:"非洲重卡客户需求跟进｜乌干达、赞比亚",en:"Heavy-Duty Truck Enquiries | Uganda & Zambia"},
+      "proj.p1d":{zh:"参与客户车辆采购需求梳理，完成重卡核心配置拆解、车型初步匹配及报价资料协调，涉及 CIF 蒙巴萨、FOB 等贸易条款。",en:"Supported customer requirement analysis for vehicle procurement, breaking down core truck configurations, completing preliminary model matching, and coordinating quotation materials under terms including CIF Mombasa and FOB."},
+      "proj.p1o1":{zh:"配置匹配",en:"Configuration Matching"},
+      "proj.p1o2":{zh:"报价协调",en:"Quotation Coordination"},
+      "proj.p2tag":{zh:"政企交付",en:"Enterprise Delivery"},
+      "proj.p2t":{zh:"VR 除冰培训设备｜民航二所",en:"VR De-icing Training System | CAAC SRI"},
+      "proj.p2d":{zh:"参与设备整体方案与软硬件协同，协调客户需求、项目实施及交付验收，项目成功交付并投入使用。",en:"Contributed to the overall solution and hardware/software coordination; managed customer requirements, implementation, and final acceptance — the system was successfully delivered and put into use."},
+      "proj.p2o1":{zh:"成功交付",en:"Successfully Delivered"},
+      "proj.p2o2":{zh:"投入使用",en:"In Active Use"},
+      "proj.p3tag":{zh:"项目负责人",en:"Project Lead"},
+      "proj.p3t":{zh:"智慧化孪生教室系统",en:"Smart Digital Twin Classroom System"},
+      "proj.p3d":{zh:"负责 Unity3D 场景与功能设计，参与技术方案及知识产权材料整理，形成软件著作权、第一作者发明专利及校级期刊论文成果。",en:"Led Unity3D scene and functional design, and contributed to technical planning and IP documentation — outcomes included a software copyright, a first-author invention patent, and an academic journal paper."},
+      "proj.p3o1":{zh:"软件著作权",en:"Software Copyright"},
+      "proj.p3o2":{zh:"第一作者发明专利",en:"First-author Patent"},
+      "proj.p3o3":{zh:"期刊论文",en:"Journal Paper"},
+
+      "edu.overline":{zh:"EDUCATION",en:"EDUCATION"},
+      "edu.h":{zh:"教育经历",en:"Education"},
+      "edu.school":{zh:"成都信息工程大学",en:"Chengdu University of Information Technology"},
+      "edu.major":{zh:"地理信息科学 · 全日制本科",en:"B.S. in Geoinformatics (Full-time)"},
+      "edu.date":{zh:"2021.09 – 2025.06",en:"2021.09 – 2025.06"},
+
+      "skills.overline":{zh:"LANGUAGES & SKILLS",en:"LANGUAGES & SKILLS"},
+      "skills.h":{zh:"语言与技能",en:"Languages & Skills"},
+      "skills.g1t":{zh:"语言能力",en:"Languages"},
+      "skills.g1i1":{zh:"中文（母语）",en:"Chinese (Native)"},
+      "skills.g1i2":{zh:"英语 CET-6",en:"English (CET-6)"},
+      "skills.g1n":{zh:"可阅读英文产品资料、进行基础商务沟通，持续强化海外销售场景口语。",en:"Able to read English product materials and handle basic business communication; continuously improving spoken English for overseas sales scenarios."},
+      "skills.g2t":{zh:"销售与业务",en:"Sales & Business"},
+      "skills.g2i1":{zh:"客户需求分析",en:"Needs Analysis"},
+      "skills.g2i2":{zh:"渠道维护与开发",en:"Channel Development"},
+      "skills.g2i3":{zh:"产品配置匹配",en:"Configuration Matching"},
+      "skills.g2i4":{zh:"方案及报价支持",en:"Proposal & Quotation"},
+      "skills.g2i5":{zh:"项目跟进",en:"Project Follow-up"},
+      "skills.g2i6":{zh:"跨部门协调",en:"Cross-functional Coordination"},
+      "skills.g3t":{zh:"技术基础",en:"Technical Foundation"},
+      "skills.g3i1":{zh:"Office 办公软件",en:"Microsoft Office"},
+      "skills.g3i2":{zh:"GIS",en:"GIS"},
+      "skills.g3i3":{zh:"Unity3D",en:"Unity3D"},
+      "skills.g3i4":{zh:"UE",en:"Unreal Engine"},
+      "skills.g3i5":{zh:"数字化可视化",en:"Digital Visualization"},
+      "skills.g3n":{zh:"熟悉数字化 / 软硬件产品基本逻辑，可支持技术型产品沟通。",en:"Familiar with the fundamentals of digital and hardware/software products, supporting communication of technical products and solutions."},
+
+      "awards.overline":{zh:"AWARDS & PUBLICATIONS",en:"AWARDS & PUBLICATIONS"},
+      "awards.h":{zh:"荣誉与成果",en:"Awards & Publications"},
+      "awards.a1t":{zh:"第一作者发明专利",en:"First-author Invention Patent"},
+      "awards.a1d":{zh:"《基于视频的虚实场景映射方法、系统及存储介质》",en:"“Video-based Virtual-Real Scene Mapping Method, System and Storage Medium”"},
+      "awards.a2t":{zh:"期刊论文",en:"Journal Publication"},
+      "awards.a2d":{zh:"成都信息工程大学学报：《智慧化孪生教室系统的设计与开发》",en:"Journal of Chengdu University of Information Technology: “Design and Development of a Smart Digital Twin Classroom System”"},
+      "awards.a3t":{zh:"「北斗杯」省二等奖",en:"Second Prize, Provincial “Beidou Cup”"},
+      "awards.a3d":{zh:"《基于北斗的智汇长江管理系统》",en:"“Beidou-based Smart Yangtze River Management System”"},
+
+      "contact.overline":{zh:"CONTACT",en:"CONTACT"},
+      "contact.h":{zh:"联系方式",en:"Get in Touch"},
+      "contact.sub":{zh:"欢迎就海外销售、国际渠道开发及驻外业务岗位机会与我联系，可随时安排面试沟通。",en:"Feel free to reach out regarding overseas sales, international channel development, or field-based business opportunities — available for interviews at any time."},
+      "contact.phoneLbl":{zh:"电话",en:"Phone"},
+      "contact.mailLbl":{zh:"邮箱",en:"Email"},
+      "contact.locLbl":{zh:"工作地点",en:"Location"},
+      "contact.locVal":{zh:"中国 · 接受驻外与国际差旅",en:"China · Open to overseas assignment & travel"},
+
+      "footer.l1":{zh:"© 2026 罗森（Sen Luo）· 海外销售 / 国际渠道开发 / 驻外业务",en:"© 2026 Sen Luo · Overseas Sales / Channel Development / International Business"},
+      "footer.l2":{zh:"本页面内容基于本人真实简历生成",en:"Content on this page is based on my actual resume."}
+    };
+
+    /* ========== 语言切换 ========== */
+    var currentLang = "zh";
+    var toggleBtn = document.getElementById("langToggle");
+
+    function applyLang(lang){
+      currentLang = lang;
+      var dict = I18N;
+      var nodes = document.querySelectorAll("[data-i18n]");
+      for(var i=0;i<nodes.length;i++){
+        var key = nodes[i].getAttribute("data-i18n");
+        if(dict[key] && dict[key][lang]){
+          nodes[i].innerHTML = dict[key][lang];
+        }
+      }
+      var attrNodes = document.querySelectorAll("[data-i18n-attr]");
+      for(var j=0;j<attrNodes.length;j++){
+        var spec = attrNodes[j].getAttribute("data-i18n-attr").split(":");
+        if(spec.length===2){
+          var k = spec[1];
+          if(dict[k] && dict[k][lang]){
+            attrNodes[j].setAttribute(spec[0], dict[k][lang]);
+          }
+        }
+      }
+      document.documentElement.setAttribute("lang", lang==="zh" ? "zh-CN" : "en");
+      document.title = lang==="zh"
+        ? "罗森 · 海外销售简历 | Sen Luo · Overseas Sales Resume"
+        : "Sen Luo · Overseas Sales Resume | 罗森";
+      toggleBtn.textContent = lang==="zh" ? "EN" : "中";
+      try{ window.localStorage.setItem("resume-lang", lang); }catch(e){}
+    }
+
+    toggleBtn.addEventListener("click", function(){
+      applyLang(currentLang==="zh" ? "en" : "zh");
+    });
+
+    try{
+      var saved = window.localStorage.getItem("resume-lang");
+      if(saved==="en" || saved==="zh"){ applyLang(saved); }
+    }catch(e){}
+
+    /* ========== 联系方式链接（渐进增强注入 href） ========== */
+    var dl = document.querySelectorAll("[data-link]");
+    for(var d=0;d<dl.length;d++){
+      dl[d].setAttribute("href", dl[d].getAttribute("data-link"));
+    }
+
+    /* ========== 页内锚点平滑滚动 ========== */
+    var anchorLinks = document.querySelectorAll('a[href^="#"]');
+    for(var a=0;a<anchorLinks.length;a++){
+      anchorLinks[a].addEventListener("click", function(ev){
+        var id = this.getAttribute("href").slice(1);
+        var target = document.getElementById(id);
+        if(target){
+          ev.preventDefault();
+          target.scrollIntoView({behavior:"smooth", block:"start"});
+          if(history.replaceState){ history.replaceState(null, "", "#"+id); }
+        }
+      });
+    }
+
+    /* ========== 入场动效（默认可见，JS 添加 .js 后才启用） ========== */
+    var revealEls = document.querySelectorAll(".reveal");
+    if("IntersectionObserver" in window && revealEls.length){
+      var io = new IntersectionObserver(function(entries){
+        for(var k=0;k<entries.length;k++){
+          if(entries[k].isIntersecting){
+            entries[k].target.classList.add("in");
+            io.unobserve(entries[k].target);
+          }
+        }
+      }, {threshold:.08, rootMargin:"0px 0px -6% 0px"});
+      for(var r=0;r<revealEls.length;r++){ io.observe(revealEls[r]); }
+    }else{
+      for(var r2=0;r2<revealEls.length;r2++){ revealEls[r2].classList.add("in"); }
+    }
+  }catch(err){
+    /* 脚本失败时静态内容仍完整可读 */
+    var all = document.querySelectorAll(".reveal");
+    for(var i=0;i<all.length;i++){ all[i].classList.add("in"); }
+  }
+})();
+</script>
+</body>
+</html>
